@@ -2,8 +2,14 @@ var app = require('express')();
 //Server module
 var http = require('http').Server(app);
 
-var website = require('./routing/website');
-app.use('/', website);
+var start = require('./routing/start');
+app.use('/', start);
+
+var javascript = require('./routing/javascript');
+app.use('/javascript', javascript);
+
+var css = require('./routing/css');
+app.use('/css', css);
 
 //Start listening on port 8080 on local host
 http.listen(process.env.PORT || 8080, function(){
