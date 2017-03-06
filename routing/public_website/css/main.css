@@ -10,4 +10,5 @@ form {
 .mepic {
     width: 300px;
     height: auto;
+    border:5px #98dafc;
 }
