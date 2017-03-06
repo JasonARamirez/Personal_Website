@@ -1,3 +1,8 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   background: #feffff !important;
   font-family: 'Poppins', sans-serif !important;
@@ -13,6 +18,13 @@ form {
     border:10px solid #98dafc;
 }
 footer{
-  background: #312c32 !important;
-  color: #feffff !important; 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background:#312c32 !important;
+  color:#feffff !important;
+  display:block;
+  text-align: center;
 }
