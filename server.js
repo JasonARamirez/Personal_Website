@@ -11,6 +11,9 @@ app.use('/javascript', javascript);
 var css = require('./routing/css');
 app.use('/css', css);
 
+var images = require('./routing/images');
+app.use('/images', images);
+
 //Start listening on port 8080 on local host
 http.listen(process.env.PORT || 8080, function(){
   console.log('listening on *:8080');
