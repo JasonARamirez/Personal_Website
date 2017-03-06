@@ -12,3 +12,7 @@ form {
     height: auto;
     border:10px solid #98dafc;
 }
+footer{
+  background: #312c32 !important;
+  color: #feffff !important; 
+}
