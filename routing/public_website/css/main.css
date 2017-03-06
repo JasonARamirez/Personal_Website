@@ -1,5 +1,5 @@
 body {
-  background: #feffff !important;
+  background: #98dafc !important;
   font-family: 'Poppins', sans-serif !important;
   color : #daad86 !important;
 } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
