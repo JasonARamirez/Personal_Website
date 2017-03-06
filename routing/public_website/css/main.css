@@ -7,3 +7,7 @@ form {
   display: inline-block;
   text-align: center;
 }
+.mepic {
+    width: 400px;
+    height: auto;
+}
