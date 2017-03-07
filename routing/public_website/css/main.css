@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 html {
   height: 100%;
   box-sizing: border-box;
@@ -7,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif !important;
   color : #daad86 !important;
   text-align: center;
+  height: 95%;
 } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 form {
   display: inline-block;
@@ -42,10 +46,9 @@ header{
   height:50px;
 }
 .spacer{
-  height:9px;
+  height:20px;
 }
 footer{
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -54,4 +57,17 @@ footer{
   color:#feffff !important;
   display:block;
   text-align: center;
+  height: 100%
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 142px;
 }
