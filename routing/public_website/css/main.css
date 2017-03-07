@@ -2,7 +2,6 @@ html {
   height: 100%;
   box-sizing: border-box;
 }
-
 body {
   background: #feffff !important;
   font-family: 'Poppins', sans-serif !important;
@@ -13,13 +12,14 @@ form {
   text-align: center;
 }
 .mepic {
-    width: 300px;
+    width: 250px;
     height: auto;
     border:10px solid #98dafc;
 }
 .flinks{
   padding-left:5px;
   padding-right:5px;
+  text-decoration:none;
 }
 footer{
   position: absolute;
