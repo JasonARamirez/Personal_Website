@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <!--Import CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
     <!--Import Fonts/Icons-->
@@ -14,10 +15,31 @@
     <title>Jason Ramirez</title>
   </head>
   <body>
-    <header class="">
+    <header>
+      <nav role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="nav navbar-header">
+            <a id="homeBtn" class="navbar-brand" href="/">Jason Ramirez</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a id="profileBtn" href="/">Profile</a></li>
+              <li><a id="projectsBtn" href="/">Projects</a></li>
+              <li><a id="skillsBtn" href="/">Skills</a></li>
+              <li><a id="hmpBtn" href="/">Hit Me Up!</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </nav>
     </header>
-    <div ng-app="myApp" ng-controller="indexController">
-      <div ng-view="" /></div> <!-- end of myApp -->
+    <div class="spacer">
+    </div>
+    <div class="container">
+      <div ng-app="myApp" ng-controller="indexController">
+        <div ng-view="" /></div> <!-- end of myApp -->
+      </div>
     </div>
     <footer>
       <div>
@@ -36,6 +58,9 @@
     <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="javascript/app.js"></script>
+    <script src="javascript/home_controller.js"></script>
+    <script src="javascript/main.js"></script>
   </body>
 </html>

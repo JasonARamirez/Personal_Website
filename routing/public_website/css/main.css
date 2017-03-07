@@ -3,9 +3,10 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: #feffff !important;
+  background:#feffff !important;
   font-family: 'Poppins', sans-serif !important;
   color : #daad86 !important;
+  text-align: center;
 } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 form {
   display: inline-block;
@@ -20,6 +21,28 @@ form {
   padding-left:5px;
   padding-right:5px;
   text-decoration:none;
+}
+.nav a {
+  color:#feffff !important;
+}
+.nav > li > #profileBtn:hover{
+    background-color:#FFAEAE;
+}
+.nav > li > #projectsBtn:hover{
+    background-color:#5B7778;
+}
+.nav > li > #skillsBtn:hover{
+    background-color:#C7AFBD;
+}
+.nav > li > #hmpBtn:hover{
+    background-color:#336666;
+}
+header{
+  background:#98dafc !important;
+  height:50px;
+}
+.spacer{
+  height:10px;
 }
 footer{
   position: absolute;
