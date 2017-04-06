@@ -8,7 +8,7 @@ html {
 body {
   background:#feffff !important;
   font-family: 'Poppins', sans-serif !important;
-  color : #daad86 !important;
+  color : #FF8C00 !important;
   text-align: center;
   height: 95%;
 } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
@@ -16,10 +16,18 @@ form {
   display: inline-block;
   text-align: center;
 }
+li{
+  text-align: center !important;
+}
 .mepic {
     width: 250px;
     height: auto;
     border:10px solid #98dafc;
+}
+.pics{
+  width: 140px;
+  height:140px;
+  border:10px solid #98dafc;
 }
 .flinks{
   padding-left:5px;
@@ -29,17 +37,8 @@ form {
 .nav a {
   color:#feffff !important;
 }
-.nav > li > #profileBtn:hover{
-    background-color:#FFAEAE;
-}
-.nav > li > #projectsBtn:hover{
-    background-color:#5B7778;
-}
-.nav > li > #skillsBtn:hover{
-    background-color:#C7AFBD;
-}
-.nav > li > #hmpBtn:hover{
-    background-color:#336666;
+.jumbotron{
+  background: #F5FFFA !important;
 }
 header{
   background:#98dafc !important;
@@ -49,6 +48,7 @@ header{
   height:20px;
 }
 footer{
+  position: relative;
   right: 0;
   bottom: 0;
   left: 0;
@@ -71,3 +71,20 @@ footer{
 .site-footer, .page-wrap:after {
   height: 90px;
 }
+/* slide in from the bottom */
+@keyframes slideInLeft {
+  from    { transform:translateX(-100%); }
+  to      { transform: translateX(0); }
+}
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+.normal-enter.ng-enter{animation: scaleUp 0.25s both ease-in; z-index: 9999; }
+.right-enter.ng-enter{animation: slideInRight 0.25s both ease-in; z-index: 9999}
+.left-enter.ng-enter{animation: sildeInLeft 0.25s both ease-in; z-index: 9999}

@@ -9,9 +9,12 @@ router.get('/home_controller.js', function(req, res){
   res.sendFile(__dirname + '/public_website/javascript/home_controller.js');
 })
 
-router.get('/main.js', function(req, res){
-  res.sendFile(__dirname + '/public_website/javascript/main.js');
+router.get('/page_start.js', function(req, res){
+  res.sendFile(__dirname + '/public_website/javascript/page_start.js');
 });
 
+router.get('/profile_controller.js', function(req, res){
+  res.sendFile(__dirname + '/public_website/javascript/profile_controller.js');
+});
 
 module.exports = router;
