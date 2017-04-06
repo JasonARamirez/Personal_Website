@@ -37,4 +37,8 @@ router.get('/Jason_Ramirez_Resume.pdf', function(req, res){
   res.sendFile(__dirname + '/public_website/images/Jason_Ramirez_Resume.pdf');
 });
 
+router.get('/Ethics_Jason_Ramirez.pdf', function(req, res){
+  res.sendFile(__dirname + '/public_website/images/Ethics_Jason_Ramirez.pdf');
+});
+
 module.exports = router;
