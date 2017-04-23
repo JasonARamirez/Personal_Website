@@ -128,3 +128,22 @@ app.controller(hmuController, function($scope, $location) {
     pageStart($scope, $location, '#hmuBtn', '#skillsBtn', skillsPage, '#homeBtn', homePage);
   });
 });
+
+$(document).ready(function(){
+  change = true
+  $('.navbar-toggle').on('click', function(){
+    if(change){
+      change = false;
+      $('#myNavbar').css('background', '#98dafc');
+    }
+    else{
+      change = true;
+      $('#myNavbar').css('background', 'transparent');
+    }
+  });
+  $('.nav a').on('click', function(){
+    if($('#myNavbar').hasClass('in')){
+      $('.navbar-toggle').click();
+    }
+  });
+});

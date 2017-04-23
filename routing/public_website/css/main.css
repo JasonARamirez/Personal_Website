@@ -19,6 +19,9 @@ form {
 li{
   text-align: center !important;
 }
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
 .mepic {
     width: 250px;
     height: auto;
@@ -40,10 +43,14 @@ li{
 .jumbotron{
   background: #F5FFFA !important;
 }
-header{
-  background:#98dafc !important;
-  height:50px;
+/* --- Style --- */
+.navbar-default {
+    background-color: #98dafc;
+    border-color: #98dafc;
+    max-height: 51px !important;
+    z-index: 9999 !important;
 }
+
 .spacer{
   height:20px;
 }

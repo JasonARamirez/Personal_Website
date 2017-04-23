@@ -16,30 +16,28 @@
     <title>Jason Ramirez</title>
   </head>
   <body>
-    <header>
-      <nav role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="nav navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a id="homeBtn" class="navbar-brand" href="/">Jason Ramirez</a>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a id="profileBtn" href="/#/profile">Profile</a></li>
-              <li><a id="projectsBtn" href="/#/projects">Projects</a></li>
-              <li><a id="skillsBtn" href="/#/skills">Skills</a></li>
-              <li><a id="hmuBtn" href="/#/hmu">Hit Me Up!</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div>
-      </nav>
-    </header>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a style="color:#feffff;"id="homeBtn" class="navbar-brand" href="/">Jason Ramirez</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a id="profileBtn" href="/#/profile">Profile</a></li>
+          <li><a id="projectsBtn" href="/#/projects">Projects</a></li>
+          <li><a id="skillsBtn" href="/#/skills">Skills</a></li>
+          <li><a id="hmuBtn" href="/#/hmu">Hit Me Up!</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
     <div class="container page-wrap">
       <div ng-app="myApp" ng-controller="indexController">
         <div ng-view ng-class="animationClass"></div> <!-- end of myApp -->
