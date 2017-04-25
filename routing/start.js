@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var folder = __dirname + '/public_website/html/';
+var saveHistory = require('../history/history');
 
 router.get('/', function(req, res){
     res.sendFile(folder + 'index.html');
+    saveHistory(req, 'index');
 });
 
 router.get('/home_view.html', function(req, res){
