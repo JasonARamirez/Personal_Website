@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Server Environment for Jason Ramirez's personal website",
   "dependencies": {
-    "express": "4.10.2"
+    "express": "4.10.2",
+    "request": "2.81.0"
   }
 }
