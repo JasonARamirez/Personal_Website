@@ -1,3 +1,4 @@
 module.exports = function(req, intent){
-  console.log(req.ip);
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  console.log(ip);
 }
