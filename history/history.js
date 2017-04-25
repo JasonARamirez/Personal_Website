@@ -8,6 +8,6 @@ module.exports = function(req, intent){
   request(url, function(error, res, body) {
     var ip_json = JSON.parse(body);
     var historyObj = new HistoryObject(ip_json, intent);
-    mongo.insertOneToHistory(historyObj);
+    db.insertOneToHistory(historyObj);
   });
 }
