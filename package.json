@@ -4,6 +4,7 @@
   "description": "Server Environment for Jason Ramirez's personal website",
   "dependencies": {
     "express": "4.10.2",
+    "mongodb": "^2.2.26",
     "request": "2.81.0"
   }
 }
