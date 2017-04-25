@@ -4,5 +4,5 @@ module.exports = function HistoryObject(ip_json, intent){
   this.state = ip_json.stateProv;
   this.city = ip_json.city;
   this.intent = intent;
-  this.time = date();
+  this.time = new Date();
 }
