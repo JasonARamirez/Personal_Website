@@ -4,7 +4,12 @@
   "description": "Server Environment for Jason Ramirez's personal website",
   "dependencies": {
     "express": "4.10.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
     "mongodb": "^2.2.26",
+    "pump": "^1.0.2",
     "request": "2.81.0"
   }
 }
