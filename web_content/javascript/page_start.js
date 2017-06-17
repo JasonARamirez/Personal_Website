@@ -15,14 +15,12 @@ var pageStart = function($scope, $location, pageBtn, leftBtn, leftPage, rightBtn
     switch(e.which) {
         // left
         case 37: $scope.$apply(function(){
-                   $scope.animationClass = "left-enter";
                    $location.path(leftPage);
                  });
         break;
 
         // right
         case 39: $scope.$apply(function(){
-                   $scope.animationClass = "right-enter";
                    $location.path(rightPage);
                  });
         break;
