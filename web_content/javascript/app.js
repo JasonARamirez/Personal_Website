@@ -9,7 +9,7 @@ var skillsController = 'skills_controller';
 var hmuPage = '/hmu';
 var hmuController = 'hmu_controller';
 
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate'])
+var app = angular.module('myApp', ['ngRoute'])
 .config(function ($routeProvider) {
     $routeProvider.when(homePage, {
       controller: homeController,
