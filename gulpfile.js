@@ -3,6 +3,7 @@ let uglify = require('gulp-uglify');
 let pump = require('pump');
 let cleanCSS = require('gulp-clean-css');
 let htmlmin = require('gulp-htmlmin');
+let server = require('./server');
 
 var src = './web_content';
 var dist = './routing/public_website';
@@ -37,4 +38,9 @@ gulp.task('minify-html', function (cb) {
   ], cb);
 });
 
-gulp.task('default', ['compress-js', 'minify-css', 'minify-html']);
+gulp.task('start', function(cb){
+  server();
+  cb();
+});
+
+gulp.task('default', ['compress-js', 'minify-css', 'minify-html', 'start']);
