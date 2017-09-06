@@ -17,6 +17,6 @@ var insertOneToDB = function(db, toInsert, tableName, err){
 }
 
 var checkForErrorAfterInsert = function(err, result){
-  assert.equal(errAfter, null);
+  assert.equal(err, null);
   assert.equal(1, result.result.n);
 }
