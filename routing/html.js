@@ -9,7 +9,7 @@ router.get('/', function(req, res){
 
 router.get('/home_view.html', function(req, res){
   res.sendFile(folder + 'home_view.html');
-  //saveHistory(req, 'home');
+  saveHistory(req, 'home');
 });
 
 router.get('/profile_view.html', function(req, res){
@@ -19,22 +19,22 @@ router.get('/profile_view.html', function(req, res){
 
 router.get('/projects_view.html', function(req, res){
   res.sendFile(folder + 'projects_view.html');
-  //saveHistory(req, 'projects');
+  saveHistory(req, 'projects');
 });
 
 router.get('/seniorDesign_view.html', function(req, res){
   res.sendFile(folder + 'seniorDesign_view.html');
-  //saveHistory(req, 'seniorDesign');
+  saveHistory(req, 'seniorDesign');
 });
 
 router.get('/skills_view.html', function(req, res){
   res.sendFile(folder + 'skills_view.html');
-  //saveHistory(req, 'skills');
+  saveHistory(req, 'skills');
 });
 
 router.get('/hmu_view.html', function(req, res){
   res.sendFile(folder + 'hmu_view.html');
-  //saveHistory(req, 'hmu');
+  saveHistory(req, 'hmu');
 });
 
 module.exports = router;
