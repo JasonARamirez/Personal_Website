@@ -14,7 +14,7 @@ router.get('/home_view.html', function(req, res){
 
 router.get('/profile_view.html', function(req, res){
   res.sendFile(folder + 'profile_view.html');
-  //saveHistory(req, 'profile');
+  saveHistory(req, 'profile');
 });
 
 router.get('/projects_view.html', function(req, res){
