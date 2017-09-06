@@ -13,7 +13,7 @@ module.exports = function(req, intent){
 
 var getAndSaveIPInfo = function(req, intent){
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  var url = ip_api + process.env.ip_key + '/' + ip;
+  var url = ip_api_location + process.env.ip_key + '/' + ip;
   request(url, function(err, res, body){
     saveHistory(err, res, body);
   });
