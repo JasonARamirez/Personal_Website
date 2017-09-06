@@ -1,15 +1,22 @@
+const mongoURI = process.env.MONGODB_URI
 var MongoClient = require('mongodb').MongoClient
 var assert = require('assert');
 
 module.exports = {
-  insertOneToHistory : function(toInsert){
-    MongoClient.connect(process.env.MONGODB_URI, function(err, db){
-      assert.equal(null, err);
-      var collection = db.collection('history');
-      collection.insertOne(toInsert, function(err, result){
-        assert.equal(err, null);
-        assert.equal(1, result.result.n);
-      });
+  insertOne : function(toInsert, tableName){
+    MongoClient.connect(mongoURI, function(err, db){
+      insertOneToDB(db, toInsert, tableName, err);
     });
   }
+}
+
+var insertOneToDB = function(db, toInsert, tableName, err){
+  assert.equal(null, err);
+  var collection = db.collection(tableName);
+  collection.insertOne(toInsert, checkForErrorAfterInsert);
+}
+
+var checkForErrorAfterInsert = function(err, result){
+  assert.equal(errAfter, null);
+  assert.equal(1, result.result.n);
 }

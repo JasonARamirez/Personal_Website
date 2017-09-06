@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 package-lock.json
+routing/public_website/css/
+routing/public_website/html/
+routing/public_website/javascript/

@@ -1,14 +1,9 @@
-var btnColorDict = {
-  '#homeBtn' : '#EDBD3E',
-  '#profileBtn' : '#FFAEAE',
-  '#projectsBtn' : '#5B7778',
-  '#skillsBtn' : '#C7AFBD',
-  '#hmuBtn' : '#336666'
-}
-var pageStart = function($scope, $location, pageBtn, leftBtn, leftPage, rightBtn, rightPage){
-  var pageBtnArr = ['#homeBtn', '#profileBtn', '#projectsBtn', '#skillsBtn', '#hmuBtn'];
-  resetAllBtnColors(pageBtnArr);
-  $(pageBtn).css("background-color", btnColorDict[pageBtn]);
+var pageStart = function($scope, $location, pagesArr, pageBtnColor, page){
+  resetAllBtnColors(pageBtnColor, pagesArr);
+  var pageBtn = '#' + page + 'Btn';
+  var leftPage = getAdjacentPage(pagesArr, page, -1);
+  var rightPage = getAdjacentPage(pagesArr, page, 1);
+  $(pageBtn).css("background-color", pageBtnColor[page]);
   $(pageBtn).off('mouseout');
   $(document).off('keyup');
   $(document).on('keyup', function(e) {
@@ -18,28 +13,33 @@ var pageStart = function($scope, $location, pageBtn, leftBtn, leftPage, rightBtn
                    $location.path(leftPage);
                  });
         break;
-
         // right
         case 39: $scope.$apply(function(){
                    $location.path(rightPage);
                  });
         break;
-        default: return; // exit this handler for other keys
     }
   });
 }
 
-var resetAllBtnColors = function(pageBtnArr){
-  pageBtnArr.forEach(function(pageBtn){
-    resetBtnColor(pageBtn);
+var getAdjacentPage = function(pagesArr, page, offset){
+  var pageI = pagesArr.indexOf(page);
+  var adjacentPageI = ((pageI + offset) + pagesArr.length) % pagesArr.length;
+  return '/' + pagesArr[adjacentPageI];
+}
+
+var resetAllBtnColors = function(pageBtnColor, pagesArr){
+  pagesArr.forEach(function(page){
+    resetBtnColor(pageBtnColor, page);
   });
 }
 
-var resetBtnColor = function(pageBtn){
+var resetBtnColor = function(pageBtnColor, page){
+  var pageBtn = '#' + page + 'Btn';
   $(pageBtn).off('mouseover');
   $(pageBtn).off('mouseout');
   $(pageBtn).mouseover(function(){
-        $(pageBtn).css("background-color", btnColorDict[pageBtn]);
+        $(pageBtn).css("background-color", pageBtnColor[page]);
   });
   $(pageBtn).mouseout(function(){
       $(pageBtn).css("background-color", '#98dafc');
