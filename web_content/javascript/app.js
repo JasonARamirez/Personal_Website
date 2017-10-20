@@ -1,10 +1,11 @@
-var pagesArr = ['home', 'profile', 'projects', 'seniorDesign', 'skills', 'hmu'];
+var pagesArr = ['home', 'profile', 'projects', 'seniorDesign', 'isuReflections', 'skills', 'hmu'];
 
 var pageBtnColor = {
   'home' : '#EDBD3E',
   'profile' : '#FFAEAE',
   'projects' : '#5B7778',
   'seniorDesign' : '#F06560',
+  'isuReflections' : '#F0E68C',
   'skills' : '#C7AFBD',
   'hmu' : '#336666'
 }

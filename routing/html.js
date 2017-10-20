@@ -27,6 +27,11 @@ router.get('/seniorDesign_view.html', function(req, res){
   saveHistory(req, 'seniorDesign');
 });
 
+router.get('/isuReflections_view.html', function(req, res){
+  res.sendFile(folder + 'isuReflections_view.html');
+  saveHistory(req, 'isuReflections');
+});
+
 router.get('/skills_view.html', function(req, res){
   res.sendFile(folder + 'skills_view.html');
   saveHistory(req, 'skills');
